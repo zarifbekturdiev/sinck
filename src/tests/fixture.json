@@ -1,0 +1,704 @@
+[
+  {
+    "model": "core.area",
+    "pk": 10,
+    "fields": {
+      "name": "Екатеринбург"
+    }
+  },
+  {
+    "model": "core.area",
+    "pk": 11,
+    "fields": {
+      "name": "Тюмень"
+    }
+  },
+  {
+    "model": "core.area",
+    "pk": 12,
+    "fields": {
+      "name": "Санкт-Петербург"
+    }
+  },
+  {
+    "model": "core.area",
+    "pk": 13,
+    "fields": {
+      "name": "Екатуринбург"
+    }
+  },
+  {
+    "model": "core.area",
+    "pk": 14,
+    "fields": {
+      "name": "Москва"
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 12,
+    "fields": {
+      "name": "Элеваторный",
+      "area": 14
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 13,
+    "fields": {
+      "name": "Домодедово",
+      "area": 14
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 14,
+    "fields": {
+      "name": "Сибирский тракт",
+      "area": 10
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 15,
+    "fields": {
+      "name": "Сибирский тракт",
+      "area": 13
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 16,
+    "fields": {
+      "name": "Интернациональная 15199",
+      "area": 11
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 17,
+    "fields": {
+      "name": "Марии Ульяновой",
+      "area": 14
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 18,
+    "fields": {
+      "name": "Озерная",
+      "area": 14
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 19,
+    "fields": {
+      "name": "Калинина",
+      "area": 12
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 20,
+    "fields": {
+      "name": "Сельскохозяйственный",
+      "area": 14
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 21,
+    "fields": {
+      "name": "Ирбитская",
+      "area": 11
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 22,
+    "fields": {
+      "name": "Интернациональная 15211",
+      "area": 11
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 23,
+    "fields": {
+      "name": "Плеханово",
+      "area": 11
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 24,
+    "fields": {
+      "name": "Нагатино",
+      "area": 14
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 25,
+    "fields": {
+      "name": "Харьковская",
+      "area": 11
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 26,
+    "fields": {
+      "name": "Нагорное",
+      "area": 14
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 27,
+    "fields": {
+      "name": "Беринга",
+      "area": 12
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 28,
+    "fields": {
+      "name": "Московский тракт",
+      "area": 11
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 29,
+    "fields": {
+      "name": "Звездный городок",
+      "area": 11
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 30,
+    "fields": {
+      "name": "Гольяново",
+      "area": 14
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 51,
+    "fields": {
+      "name": "ГП-6",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 52,
+    "fields": {
+      "name": "ГП-9",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 53,
+    "fields": {
+      "name": "ГП-1",
+      "project": 19
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 54,
+    "fields": {
+      "name": "ГП-29 Котельная",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 55,
+    "fields": {
+      "name": "ГП-4",
+      "project": 22
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 56,
+    "fields": {
+      "name": "ГП-1",
+      "project": 12
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 57,
+    "fields": {
+      "name": "ГП-Котельная",
+      "project": 16
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 58,
+    "fields": {
+      "name": "Этап-4",
+      "project": 14
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 59,
+    "fields": {
+      "name": "ГП-6",
+      "project": 28
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 60,
+    "fields": {
+      "name": "ГП-3",
+      "project": 16
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 61,
+    "fields": {
+      "name": "ГП-6",
+      "project": 29
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 62,
+    "fields": {
+      "name": "ГП-9",
+      "project": 29
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 63,
+    "fields": {
+      "name": "ГП-7",
+      "project": 28
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 64,
+    "fields": {
+      "name": "ГП-7",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 65,
+    "fields": {
+      "name": "Этап-3",
+      "project": 15
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 66,
+    "fields": {
+      "name": "ГП-1",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 67,
+    "fields": {
+      "name": "ГП-18",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 68,
+    "fields": {
+      "name": "ГП-11",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 69,
+    "fields": {
+      "name": "ГП-1",
+      "project": 20
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 70,
+    "fields": {
+      "name": "ГП-2",
+      "project": 25
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 71,
+    "fields": {
+      "name": "ГП-5",
+      "project": 25
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 72,
+    "fields": {
+      "name": "ГП-3 Паркинг",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 73,
+    "fields": {
+      "name": "ГП-30 Котельная",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 74,
+    "fields": {
+      "name": "ГП-4",
+      "project": 25
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 75,
+    "fields": {
+      "name": "ГП-8",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 76,
+    "fields": {
+      "name": "ГП-7",
+      "project": 29
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 77,
+    "fields": {
+      "name": "ГП-10",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 78,
+    "fields": {
+      "name": "ГП-1",
+      "project": 13
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 79,
+    "fields": {
+      "name": "ГП-3",
+      "project": 28
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 80,
+    "fields": {
+      "name": "ГП-2",
+      "project": 16
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 81,
+    "fields": {
+      "name": "ГП-1",
+      "project": 27
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 82,
+    "fields": {
+      "name": "ГП-1",
+      "project": 21
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 83,
+    "fields": {
+      "name": "Этап-3",
+      "project": 14
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 84,
+    "fields": {
+      "name": "ГП-1",
+      "project": 28
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 85,
+    "fields": {
+      "name": "Этап-1",
+      "project": 14
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 86,
+    "fields": {
+      "name": "ГП-15",
+      "project": 29
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 87,
+    "fields": {
+      "name": "ГП-12",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 88,
+    "fields": {
+      "name": "ГП-4",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 89,
+    "fields": {
+      "name": "ГП-2",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 90,
+    "fields": {
+      "name": "ГП-1",
+      "project": 17
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 91,
+    "fields": {
+      "name": "ГП-8",
+      "project": 29
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 92,
+    "fields": {
+      "name": "ГП-3",
+      "project": 29
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 93,
+    "fields": {
+      "name": "ГП-1",
+      "project": 24
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 94,
+    "fields": {
+      "name": "ГП-1",
+      "project": 18
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 95,
+    "fields": {
+      "name": "ГП-13",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 96,
+    "fields": {
+      "name": "ГП-4",
+      "project": 29
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 97,
+    "fields": {
+      "name": "ГП-1",
+      "project": 25
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 98,
+    "fields": {
+      "name": "ГП-1",
+      "project": 30
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 99,
+    "fields": {
+      "name": "Этап-2",
+      "project": 14
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 100,
+    "fields": {
+      "name": "ГП-2",
+      "project": 28
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 101,
+    "fields": {
+      "name": "ГП-7 переход",
+      "project": 29
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 102,
+    "fields": {
+      "name": "ГП-2",
+      "project": 29
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 103,
+    "fields": {
+      "name": "ГП-5",
+      "project": 23
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 104,
+    "fields": {
+      "name": "ГП-4",
+      "project": 28
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 105,
+    "fields": {
+      "name": "ГП-3",
+      "project": 25
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 106,
+    "fields": {
+      "name": "ГП-2",
+      "project": 27
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 107,
+    "fields": {
+      "name": "ГП-5",
+      "project": 28
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 108,
+    "fields": {
+      "name": "ГП-1",
+      "project": 26
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 109,
+    "fields": {
+      "name": "ГП-1",
+      "project": 16
+    }
+  },
+  {
+    "model": "core.gp",
+    "pk": 110,
+    "fields": {
+      "name": "ГП-5",
+      "project": 29
+    }
+  },
+  {
+    "model": "core.department",
+    "pk": 1,
+    "fields": {
+      "name": "Блок Продажи и Маркетинг"
+    }
+  },
+  {
+    "model": "core.department",
+    "pk": 2,
+    "fields": {
+      "name": "Департамент ИРД"
+    }
+  },
+  {
+    "model": "core.department",
+    "pk": 3,
+    "fields": {
+      "name": "Управление обеспечения ПД"
+    }
+  },
+  {
+    "model": "core.department",
+    "pk": 4,
+    "fields": {
+      "name": "Финансовый департамент"
+    }
+  },
+  {
+    "model": "core.department",
+    "pk": 5,
+    "fields": {
+      "name": "Управление архитектуры и дизайна"
+    }
+  }
+]

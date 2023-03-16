@@ -1,0 +1,56 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  DOCKER_REGISTRY: cr.yandex/crpgcdmv6rgq68b22lqi
+  IMAGE_PATH: strana/sup/backend/${CI_COMMIT_REF_SLUG}
+  IMAGE: ${DOCKER_REGISTRY}/${IMAGE_PATH}
+
+build: &build-config
+  only:
+    - dev
+  stage: build
+  variables:
+    IMAGE_TAG: ${IMAGE}:${CI_COMMIT_SHORT_SHA}
+  before_script:
+    - cat ${YANDEX_REGISTRY_KEY} | docker login --username json_key --password-stdin cr.yandex
+  script:
+    - env | grep -v "CI_" > .env
+    - echo "Building image ${IMAGE_TAG}..."
+    - docker build -t ${IMAGE_TAG} -t ${IMAGE}:latest -f ./deploy/Dockerfile ./src --target serve
+    - docker push ${IMAGE_TAG}
+    - docker push ${IMAGE}:latest
+
+build prod:
+  <<: *build-config
+  when: manual
+  only:
+    - main
+
+deploy: &deploy-config
+  only:
+    - dev
+  stage: deploy
+  image: lwolf/helm-kubectl-docker
+  needs: [build]
+  variables:
+    IMAGE_TAG: ${IMAGE}:${CI_COMMIT_SHORT_SHA}
+    NAMESPACE: strana-sup
+    DEPLOYMENT: backend
+  environment:
+    name: stage
+    url: "https://sup.strana.t.crtweb.ru/"
+  script:
+    - kubectl set image deployment/${DEPLOYMENT} --namespace ${NAMESPACE} --kubeconfig ${KUBECONFIG} 
+      app=${IMAGE_TAG} worker=${IMAGE_TAG} scheduler=${IMAGE_TAG} app-migrate=${IMAGE_TAG} --record
+
+deploy prod: 
+  <<: *deploy-config
+  only:
+    - main
+  needs: ['build prod']
+  environment:
+    name: production
+    # url: "https://sup.strana.ru/"
+

@@ -1,0 +1,53 @@
+services:
+
+  app:
+    build:
+      context: ./src
+      dockerfile: ../deploy/Dockerfile
+    restart: always
+    volumes:
+      - ./src:/app
+      - ./logs/app:/app/logs
+    ports:
+      - "${HTTP_PORT:-80}:8000"
+    environment:
+      POSTGRES_HOST: ${POSTGRES_HOST:-database}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_USER: ${POSTGRES_USER}
+    depends_on:
+      - database
+      - redis
+
+  database:
+    image: postgres:${POSTGRES_VERSION:-12}-alpine
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-strana}
+      # You should definitely change the password in production
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-strongPAS}
+      POSTGRES_USER: ${POSTGRES_USER:-webmaster}
+    ports:
+      - ${POSTGRES_PORT:-5432}:5432
+
+  redis:
+    image: redis:alpine
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+
+  worker:
+    build:
+      context: ./src
+      dockerfile: ../deploy/Dockerfile
+    command: celery -A conf beat -l INFO
+    volumes:
+      - ./src:/app
+      - ./logs/worker:/app/logs
+    restart: always
+    environment:
+      POSTGRES_HOST: ${POSTGRES_HOST:-database}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_USER: ${POSTGRES_USER}
+
+volumes:
+  pg_data: ~
