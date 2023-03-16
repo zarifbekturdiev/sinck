@@ -41,7 +41,7 @@ def run_sync_tasks(self):
             # Уведомления администратора о удачной синхронизации данных
             send_mail(
                 'Cинхронизации данных',
-                f'Синхронизация данных с {settings.DATABASES["strana_source"]["NAME"]} успешно завершена.\n'
+                f'Синхронизация данных с {settings.DATABASES["source"]["NAME"]} успешно завершена.\n'
                 f'Время: {now().strftime("%Y-%m-%d %H:%M:%S")}\n',
                 settings.DEFAULT_FROM_EMAIL,
                 [config.SUP_ADMIN_EMAIL],
@@ -52,7 +52,7 @@ def run_sync_tasks(self):
         # Уведомления администратора о неудачной синхронизации данных
         send_mail(
             'Ошибка синхронизации данных',
-            f'Неудачная попытка синхронизации данных с {settings.DATABASES["strana_source"]["NAME"]}\n'
+            f'Неудачная попытка синхронизации данных с {settings.DATABASES["source"]["NAME"]}\n'
             f'Время: {now().strftime("%Y-%m-%d %H:%M:%S")}\n'
             f'Ошибка: {str(exc)}',
             settings.DEFAULT_FROM_EMAIL,

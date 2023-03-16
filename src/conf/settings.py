@@ -123,7 +123,7 @@ DATABASES = {
         'HOST': env.str('POSTGRES_HOST'),
         'PORT': env.str('POSTGRES_PORT'),
     },
-    'strana_source': {
+    'source': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': env.str('MYSQL_NAME'),
         'USER': env.str('MYSQL_USER'),
@@ -254,7 +254,7 @@ CONSTANCE_CONFIG = {
     ),
     'SYNCHRONIZATION_INTERVAL': (24, 'Промежуточные часы между запуском синхронизации'),
     'SYNCHRONIZATION_RETRIES_COUNT': (3, 'Количество попыток синхронизации данных из бд'),
-    'SUP_ADMIN_EMAIL': ('mis@strana.com', 'Электронная почта администратора sup для уведомления'),
+    'SUP_ADMIN_EMAIL': ('test@gmail.com', 'Электронная почта администратора sup для уведомления'),
     'CONTROL_PERIOD_IN_DAYS': (30, 'Контрольный период'),
     'LAST_SYNC_DATE': (datetime.date(2022, 7, 27), 'Дефолтная значения даты последний синхронизации'),
     'MAX_OPERATIONAL_TASK_ON_STRATEGIC_TASK': (10, 'Максимальное количество операционных задач '

@@ -10,7 +10,7 @@ class TaskFetcher:
     cursor: CursorDebugWrapper
 
     def __init__(self):
-        self.cursor = connections['strana_source'].cursor()
+        self.cursor = connections['source'].cursor()
 
     def close_cursor(self):
         self.cursor.close()

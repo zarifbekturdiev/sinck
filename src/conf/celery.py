@@ -12,7 +12,7 @@ from constance import config
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'conf.settings')
 
-app = Celery('strana-sup')
+app = Celery('')
 
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
